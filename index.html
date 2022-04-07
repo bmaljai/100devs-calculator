@@ -15,29 +15,37 @@
             <div id="buttonRow1" class="buttonRow">
                 <a data-key="" class="number">7</a>
                 <a data-key="" class="number">8</a>
-                <a data-key="65" class="number">9</a>
-                <a data-key="65" class="operator">/</a>
+                <a data-key="" class="number">9</a>
+                <a data-key="" class="operator">/</a>
             </div>
             <div id="buttonRow2" class="buttonRow">
-                <a data-key="65" class="number">4</a>
-                <a data-key="65" class="number">5</a>
-                <a data-key="65" class="number">6</a>
-                <a data-key="65" class="operator">x</a>
+                <a data-key="" class="number">4</a>
+                <a data-key="" class="number">5</a>
+                <a data-key="" class="number">6</a>
+                <a data-key="" class="operator">x</a>
             </div>
             <div id="buttonRow3" class="buttonRow">
-                <a data-button="1">1</a>
-                <a data-key="65" class="number">2</a>
-                <a data-key="65" class="number">3</a>
-                <a data-key="65" class="operator">+</a>
+                <a data-key="1" class="number">1</a>
+                <a data-key="" class="number">2</a>
+                <a data-key="" class="number">3</a>
+                <a data-key="" class="operator">+</a>
             </div>
             <div id="buttonRow4" class="buttonRow">
-                <a data-key="65" class="number">0</a>
-                <a data-key="65" class="operator">.</a>
-                <a data-key="65" class="operator">=</a>
-                <a data-key="65" class="operator">-</a>
+                <a data-key="" class="number">0</a>
+                <a data-key="" class="operator">.</a>
+                <a data-key="" class="operator">=</a>
+                <a data-key="" class="operator">-</a>
             </div>
         </section>
     </section>
-    
+    <script>
+        const numKeys = document.querySelectorAll(".number");
+        const screen = document.querySelector("#screen");
+        numKeys.forEach(element=>element.addEventListener('click',pushValue))
+        function pushValue(){
+            console.log(this.innerText);
+            screen.innerText += this.innerText;
+        }
+    </script>
 </body>
 </html>
